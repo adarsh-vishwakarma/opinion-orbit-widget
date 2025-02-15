@@ -22,7 +22,8 @@ class WidgetWebComponent extends HTMLElement {
   getPropsFromAttributes() {
     const props = {};
     for (const { name, value } of this.attributes) {
-      props[normalizeAttribute(name)] = value;
+      const key = normalizeAttribute(name);
+      props[key] = String(value); // Ensures all attributes are treated as strings
     }
     return props;
   }
