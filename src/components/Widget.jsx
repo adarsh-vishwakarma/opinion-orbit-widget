@@ -19,20 +19,21 @@ const Widget = ({ projectId }) => {
   const submit = async (e) => {
     e.preventDefault();
     const form = e.target;
+
     const data = {
-      p_project_id: projectId,
+      p_project_id: "1ca117cf-8b15-4121-8e32-22167b0f92ff",
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
       p_rating: rating,
     };
-    // console.log(data)
+    console.log(data)
     const { data: returnedData, error } = await supabase.rpc(
       "add_feedback",
       data
     );
     setSubmitted(true);
-    // console.log(returnedData);
+
   };
   return (
     <>
