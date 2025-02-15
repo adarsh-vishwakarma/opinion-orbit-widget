@@ -19,10 +19,9 @@ const Widget = ({ projectId }) => {
   const submit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const project_id = String(projectId);
-        console.log(projectId)
+
     const data = {
-      p_project_id: project_id,
+      p_project_id: "1ca117cf-8b15-4121-8e32-22167b0f92ff",
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
