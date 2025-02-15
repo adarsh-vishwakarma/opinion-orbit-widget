@@ -19,9 +19,10 @@ const Widget = ({ projectId }) => {
   const submit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    console.log(projectId)
+    const project_id = toString(projectId)
+        console.log(projectId)
     const data = {
-      p_project_id: projectId,
+      p_project_id: project_id,
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
