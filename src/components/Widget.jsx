@@ -21,7 +21,7 @@ const Widget = ({ projectId }) => {
     const form = e.target;
 
     const data = {
-      p_project_id: projectId,
+      p_project_id: 2,
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
