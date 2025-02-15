@@ -21,7 +21,7 @@ const Widget = ({ projectId }) => {
     const form = e.target;
     console.log(projectId)
     const data = {
-      p_project_id: "95b0be43-cca1-435b-8710-0f94b6bc8777",
+      p_project_id: projectId,
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
