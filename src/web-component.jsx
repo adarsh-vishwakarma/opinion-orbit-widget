@@ -15,15 +15,13 @@ class WidgetWebComponent extends HTMLElement {
   connectedCallback() {
     const props = this.getPropsFromAttributes();
     const root = ReactDom.createRoot(this.shadowRoot);
-    console.log(root)
     root.render(<Widget {...props} />);
   }
 
   getPropsFromAttributes() {
     const props = {};
     for (const { name, value } of this.attributes) {
-      const key = normalizeAttribute(name);
-      props[key] = String(value); // Ensures all attributes are treated as strings
+      props[normalizeAttribute(name)] = value;
     }
     return props;
   }
