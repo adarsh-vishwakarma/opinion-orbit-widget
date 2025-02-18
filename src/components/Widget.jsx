@@ -38,7 +38,7 @@ const Widget = ({ projectId }) => {
   return (
     <>
       <style>{tailwindStyles}</style>
-      <div className="widget fixed bottom-4 right-4 z-50">
+      <div className="widget fixed bottom-4 right-4 z-100">
         <Popover>
           <PopoverTrigger asChild>
             <Button className="widget rounded-full shadow-lg hover:scale-105">
@@ -107,11 +107,11 @@ const Widget = ({ projectId }) => {
             <div className="text-gray-600">
               Powered by{" "}
               <a
-                href="https://nexx-saas.vercel.app/"
+                href="https://opinion-orbit-drab.vercel.app/"
                 target="_blank"
                 className="text-indigo-600 hover:underline"
               >
-                Nexx ⚡️
+                Opinion Orbit ⚡️
               </a>
             </div>
           </PopoverContent>
